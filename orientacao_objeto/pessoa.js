@@ -12,5 +12,5 @@ class Pessoa{
 
 
 
-
+//module.exports também pode ser usado!
 export default Pessoa; 
