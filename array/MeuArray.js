@@ -31,6 +31,19 @@ class MeuArray {
 
         return ultimoItem;
     }
+
+    obterElemento(indice){
+        if (indice < 0 || indice>=this.tamanho){
+            return undefined;
+        }
+        return this.items[indice];
+    }
+
+    tamanhoArray(){
+        return this.tamanho
+    }
 }
+
+
 
 module.exports = MeuArray;
