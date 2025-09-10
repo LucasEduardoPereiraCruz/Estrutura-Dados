@@ -1,6 +1,6 @@
-const MeuArray = require("./MeuArray");
+const meuArray = require("./meuArray");
 
-const minhaLista = new MeuArray();
+const minhaLista = new meuArray();
 
 minhaLista.adicionar("Varrer");
 minhaLista.adicionar("Cozinhar");
