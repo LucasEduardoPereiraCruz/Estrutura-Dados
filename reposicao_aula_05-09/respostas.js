@@ -35,3 +35,4 @@
 //os atributos com # são privados e não podem ser acessados fora da classe, garantindo proteção dos dados.
 
 // 10. ESSA QUESTÃO ESTÁ NO ARQUIVO app1.js!!!!!
+//Respondendo de forma escrita: O resultado é 5, 10 e 20, o 15 não aparece pq removemos ele e o tamanho do array é 3.
