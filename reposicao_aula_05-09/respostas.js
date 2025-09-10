@@ -1,4 +1,4 @@
-/*JUSTIFICANDO A RESPOSTA*/
+/*JUSTIFICANDO AS RESPOSTAS*/
 
 // 1. Ele retorna o valor 0, pelo fato de eu ter criado um array vazio e 
 // defifnir o tamanho inicial dele como 0, e como eu não adicionei nenhum elemento, ele dá esse resultado.
