@@ -3,6 +3,8 @@ const meuArray = require("./meuArray");
 const minhaLista = new meuArray();
 
 minhaLista.adicionar("Varrer");
+console.table(minhaLista.items);
+
 minhaLista.adicionar("Cozinhar");
 minhaLista.adicionar("Jogar bola");
 minhaLista.adicionar("Estudar");

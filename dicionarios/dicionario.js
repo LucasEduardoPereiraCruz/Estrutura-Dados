@@ -24,3 +24,6 @@ console.log(Object.values(alunos));
 
 //Obter todas as chaves
 console.log(Object.keys(alunos));
+
+//Mais uma forma de ver a lista (sem iteração)
+console.log(alunos);
