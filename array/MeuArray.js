@@ -42,6 +42,13 @@ class MeuArray {
     tamanhoArray(){
         return this.tamanho
     }
+
+    search(value) {
+        for (let i = 0; i < this.tamanho; i++) {
+            if (this.items[i] === value) return true;
+        }
+        return false;
+    }
 }
 
 

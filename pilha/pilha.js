@@ -22,6 +22,15 @@ class minhaPilha{
         return ultimoItem;
     }
 
+    search(value) {
+        for (let i = 0; i < this.#tamanho; i++) {
+            if (this.#items[i] === value) return true;
+        }
+        return false;
+    }
+
+
+
     topo(){
         if(this.#tamanho === 0){
             return undefined;

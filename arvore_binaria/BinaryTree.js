@@ -21,6 +21,13 @@ class BinaryTree{
         }
     }
 
+    search(value, node = this.root) {
+        if (!node) return false;
+        if (node.value === value) return true;
+        if (value < node.value) return this.search(value, node.left);
+        return this.search(value, node.right);
+    }
+
     _insertNode(node, newNode){
         if(newNode.value < node.value){
             if(node.left === null){
@@ -112,7 +119,6 @@ class BinaryTree{
             return node;
         }
     }
-
 
     _findMinNode(node){
         while(node.left !== null){

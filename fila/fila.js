@@ -28,6 +28,14 @@ class Fila {
         return item;
     }
 
+    search(value) {
+        for (let i = this.#inicio; i < this.#fim; i++) {
+            if (this.#items[i] === value) return true;
+        }
+        return false;
+    }
+
+
     front(){
         if(this.estaVazia()){
             return undefined;

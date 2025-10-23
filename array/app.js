@@ -1,4 +1,4 @@
-const meuArray = require("./meuArray");
+const meuArray = require("./MeuArray");
 
 const minhaLista = new meuArray();
 

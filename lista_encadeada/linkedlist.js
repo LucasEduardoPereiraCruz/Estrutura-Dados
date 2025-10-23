@@ -20,6 +20,16 @@ class LinkedList{
         this.#length++
     }
 
+    search(value) {
+    let current = this.#head;
+    while (current) {
+        if (current.value === value) return true;
+        current = current.next;
+    }
+    return false;
+    }
+
+
     insertAtEnd(value){
         let newNode = new Node(value);
 
@@ -60,7 +70,6 @@ class LinkedList{
         this.#length--;
 
     }
-
 
     find(value){
         let current = this.#head;

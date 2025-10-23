@@ -41,7 +41,7 @@ class AVLTree {
         const y = x.right;
         const T2 = y.left;
 
-        y.left = y;
+        y.left = x;
         x.right = T2;
 
         this.updateHeight(x);
@@ -53,4 +53,56 @@ class AVLTree {
     insert(value){
         this.root = this._insert(this.root, value);
     }
+
+    search(value, node = this.root) {
+        if (!node) return false;
+        if (node.value === value) return true;
+        if (value < node.value) return this.search(value, node.left);
+        return this.search(value, node.right);
+    }
+
+    _insert(node, value){
+        if(!node) return new AVLNode(value);
+
+        if(value < node.value){
+            node.left = this._insert(node.left, value);
+        } else if (value > node.value){
+            node.right = this._insert(node.right, value);
+        } else {
+            return node;
+        }
+
+        this.updateHeight(node);
+        const balance = this.getBalanceFactor(node);
+
+        if(balance > 1 && value < node.left.value){
+            return this.rotateRight(node);
+        }
+
+        if(balance < -1 && value > node.right.value){
+            return this.rotateLeft(node);
+        }
+
+        if(balance > 1 && value > node.left.value){
+            node.left = this.rotateLeft(node.left);
+            return this.rotateRight(node);
+        }
+
+        if(balance < -1 && value < node.right.value){
+            node.right = this.rotateRight(node.right);
+            return this.rotateLeft(node);
+        }
+
+        return node;
+    }
+
+    inOrder(node = this.root){
+        if(node){
+            this.inOrder(node.left);
+            console.log(node.value);
+            this.inOrder(node.right);
+        }
+    }
 }
+
+module.exports = AVLTree;
